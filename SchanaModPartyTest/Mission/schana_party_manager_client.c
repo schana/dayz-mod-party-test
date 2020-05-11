@@ -2,12 +2,12 @@ modded class SchanaPartyManagerClient {
     void SchanaPartyManagerClient () {
         SchanaPartyUtils.LogMessage ("Test Client Init " + MissionBase.SCHANA_PARTY_VERSION);
 
-        // GetGame ().GetCallQueue (CALL_CATEGORY_GUI).CallLater (this.MockUpdate, 5000, true);
-        GetGame ().GetCallQueue (CALL_CATEGORY_GUI).CallLater (this.TestConfigLoading, 200, true);
+        //GetGame ().GetCallQueue (CALL_CATEGORY_GUI).CallLater (this.MockUpdate, 5000, true);
+        //GetGame ().GetCallQueue (CALL_CATEGORY_GUI).CallLater (this.TestConfigLoading, 200, true);
     }
 
     void ~SchanaPartyManagerClient () {
-        // GetGame ().GetCallQueue (CALL_CATEGORY_GUI).Remove (this.MockUpdate);
+        GetGame ().GetCallQueue (CALL_CATEGORY_GUI).Remove (this.MockUpdate);
         GetGame ().GetCallQueue (CALL_CATEGORY_GUI).Remove (this.TestConfigLoading);
     }
 
